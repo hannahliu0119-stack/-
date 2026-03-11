@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>职海导航 - 岗位匹配评估</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f8fafc; }
+        .mobile-container { width: 375px; height: 812px; margin: 0 auto; background: white; position: relative; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15); border: 8px solid #334155; border-radius: 40px; }
+        .dashed-border { background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='24' ry='24' stroke='%233B82F6FF' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e"); border-radius: 24px; }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+<div class="mobile-container overflow-y-auto">
+<!-- 导航栏 -->
+<header class="sticky top-0 bg-white/80 backdrop-blur-md z-10 p-4 pt-12 flex items-center border-b border-slate-50">
+<a class="p-2 hover:bg-slate-100 rounded-full transition-colors" href="index.html">
+<span class="iconify w-6 h-6 text-slate-800" data-icon="solar:alt-arrow-left-linear"></span>
+</a>
+<div class="flex-1 text-center pr-10">
+<h1 class="text-lg font-bold text-slate-800">岗位匹配评估</h1>
+<p class="text-[9px] text-slate-400 font-medium">职海导航 · 智能Offer分析</p>
+</div>
+</header>
+<main class="p-6 space-y-8 pb-32">
+<!-- 步骤提示 -->
+<div class="flex justify-between px-2">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm">1</div>
+<span class="text-[10px] mt-1 font-bold text-blue-700">上传简历</span>
+</div>
+<div class="flex-1 h-[2px] bg-blue-200 self-center mt-[-16px] mx-2"></div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm border-2 border-white ring-1 ring-slate-200">2</div>
+<span class="text-[10px] mt-1 font-bold text-slate-500">解析岗位</span>
+</div>
+<div class="flex-1 h-[2px] bg-slate-200 self-center mt-[-16px] mx-2"></div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm border-2 border-white ring-1 ring-slate-200">3</div>
+<span class="text-[10px] mt-1 font-bold text-slate-500">完成报告</span>
+</div>
+</div>
+<!-- 简历上传区域 -->
+<section>
+<div class="flex justify-between items-end mb-3">
+<h3 class="font-bold text-slate-800">上传您的简历</h3>
+<span class="text-[10px] text-blue-600">支持 PDF/DOCX/图片</span>
+</div>
+<div class="dashed-border h-44 bg-blue-50 flex flex-col items-center justify-center p-6 text-center cursor-pointer active:bg-blue-100 transition-colors">
+<span class="iconify w-12 h-12 text-blue-500 mb-2" data-icon="solar:cloud-upload-bold-duotone"></span>
+<p class="text-sm font-semibold text-blue-700">点击或将文件拖至此处</p>
+<p class="text-xs text-blue-400 mt-1">最大支持 20MB</p>
+</div>
+<!-- 模拟已选择文件 -->
+<div class="mt-3 flex items-center justify-between p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+<div class="flex items-center">
+<span class="iconify w-5 h-5 text-emerald-500" data-icon="solar:file-check-bold"></span>
+<span class="text-xs text-emerald-700 ml-2 font-medium">我的个人简历_2026.pdf</span>
+</div>
+<span class="iconify w-4 h-4 text-emerald-400" data-icon="solar:close-circle-linear"></span>
+</div>
+</section>
+<!-- 岗位 JD 输入框 -->
+<section>
+<h3 class="font-bold text-slate-800 mb-3">目标岗位 JD / 要求</h3>
+<div class="relative">
+<textarea class="w-full h-48 bg-slate-50 rounded-2xl p-4 text-sm border border-slate-100 focus:ring-2 focus:ring-blue-500 focus:bg-white outline-none transition-all resize-none" placeholder="请粘贴目标岗位的任职要求或职位描述 (JD)..."></textarea>
+<div class="absolute bottom-4 right-4 text-[10px] text-slate-400">已输入 0/2000</div>
+</div>
+<div class="flex flex-wrap gap-2 mt-3">
+<button class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-[11px] text-slate-600 hover:border-blue-300 hover:text-blue-600 transition-colors">+ 导入智联/BOSS链接</button>
+<button class="px-3 py-1.5 bg-white border border-slate-200 rounded-full text-[11px] text-slate-600 hover:border-blue-300 hover:text-blue-600 transition-colors">+ 常用模版</button>
+</div>
+</section>
+</main>
+<!-- 固定底部按钮 -->
+<div class="absolute bottom-0 w-full p-6 bg-white border-t border-slate-100">
+<a class="flex items-center justify-center w-full py-4 bg-blue-600 text-white rounded-2xl font-bold shadow-lg shadow-blue-100 active:scale-[0.98] transition-all" href="report.html">
+<span class="iconify mr-2" data-icon="solar:magic-stick-3-bold"></span> 提交 AI 评估
+            </a>
+</div>
+</div>
+</body>
+</html>
